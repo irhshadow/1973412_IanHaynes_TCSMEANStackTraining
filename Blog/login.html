@@ -1,28 +1,59 @@
 <html>
-	
-	<head>
+	<link rel="stylesheet" href="style.css">	
+	<head class="mainContent">
 		<title>Login</title>
+		<style>
+			#box{
+				height:75px;
+				width:300px;
+				border:black 1px solid;
+				margin:auto;
+				padding:5px 0px 0px 50px;
+				border-radius:20px;
+			}
+		</style>
+		<script type="text/javascript">
+			function checkCredentials(userName, userPassword){
+				if(userName.value != "user" || userPassword.value != "1234"){
+					window.alert("Incorrect Username/Password");
+    				return false;
+				}
+				else{
+					location.href = "index.html";
+				}
+			}
+		</script>
 	</head>
 	
-	<body>
-		<nav>
-			<a href="index.html"> Home</a> |
-			<a href="archive.html"> Archive</a> |
-			<a href="contact.html"> Contact Us!</a> |
-			<a href="login.html"> Log In</a> |
-		</nav>
-		
-		<form action="index.html" method="post">
-			<label>Username</label>
-			<input type="text"/><br>
-			<label>Password</label>
-			<input type="password"/><br>
-			<input type="submit" value="Sign In"/>
-			<input type="reset"/>
-		</form>
-		
-		
-		
-	</body>
-	
+	<div class="container">
+		<div class= "header-container">
+            <header>
+                <h1>Company Name</h1>
+            </header>
+            <nav>
+                <ul>
+					<li><a href="index.html"> Home</a></li>
+					<li><a href="archive.html"> Archive</a></li>
+					<li><a href="contact.html"> Contact Us!</a></li>
+					<li><a href="login.html"> Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+		<body>		
+			<form action="index.html" method="get" id="box">
+				<label>Username</label>
+				<input type="text" id="userName" required/><br>
+				<label>Password</label>
+				<input type="password" id="userPassword" required/><br>
+				<input type="submit" value="Sign In" onclick="checkCredentials(userName, userPassword);"/>
+				<input type="reset"/>
+			</form>	
+			<div class= "footer-container clearfix">
+				<footer>
+					<div>(C) Copyright 2021 Company Name</div>
+					<div>More info to get ahold of us</div>				
+				</footer>
+			</div>
+		</body>
+	</div>
 </html>
