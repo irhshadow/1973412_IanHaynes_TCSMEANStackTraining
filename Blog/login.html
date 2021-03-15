@@ -16,6 +16,7 @@
 			function checkCredentials(userName, userPassword){
 				if(userName.value != "user" || userPassword.value != "1234"){
 					window.alert("Incorrect Username/Password");
+					location.href = "login.html";
     				return false;
 				}
 				else{

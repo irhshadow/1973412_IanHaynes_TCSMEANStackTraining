@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="new-budget">
+        <form id="add-project">
+            <label>Client Name: </label>
+            <input type="text" id="client-name" required><br>
+            <label>Project Name: </label>
+            <input type="text" id="project-name" required><br>
+            <label>Budget: </label>
+            <input type="number" id="budget" required><br>
+            <input type="button" value="Submit" onclick="onButtonClick()">
+            <input type="reset">
+        </form>
+    </div>
+    <div>
+        <a href="index.html">Back</a>
+    </div>
+</body>
+
+<script>
+    var projects =[];
+
+    function deal(client, project, budget){
+        this.client = client;
+        this.project = project;
+        this.budget = budget;
+
+        function getData(key){
+            switch(key){
+                case "client":
+                    return this.client;
+                    break;
+                case "project":
+                    return this.project;
+                    break;
+                case "budget": 
+                    return this.budget;
+            }
+        }
+    }
+
+    function onButtonClick(){
+        var deal = new Object();
+        deal.client = document.getElementById("client-name").value;
+        deal.project = document.getElementById("project-name").value;
+        deal.budget = document.getElementById("budget").value;
+        document.getElementById("add-project").reset();
+        projects.push(deal);
+        sessionStorage.projects = JSON.stringify(projects);
+    }
+
+</script>
+
+</html>

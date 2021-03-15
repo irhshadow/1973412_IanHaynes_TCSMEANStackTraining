@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div><a href="index.html">Back</a></div>
+</body>
+
+<script>
+    function makeTable(){
+        var deals = sessionStorage.projects;
+        parsed = JSON.parse(deals);
+        var totalBudget = 0;
+        var tbl = document.createElement("table");
+        var head = tbl.insertRow();
+        var headers = ["Client Name", "Project Name", "Budget"];
+
+        for(var i=0; i<3; i++){
+            var data = head.insertCell();
+            data.appendChild(document.createTextNode(headers[i]));
+        }
+        
+        for(var i=0; i<parsed.length; i++){
+            var row = tbl.insertRow();
+            var entry = parsed[i];       
+            var data = row.insertCell();
+            data.appendChild(document.createTextNode(entry.client));
+            data.style.border = "1px solid black";
+            var data = row.insertCell();
+            data.appendChild(document.createTextNode(entry.project));
+            data.style.border = "1px solid black";
+            var data = row.insertCell();
+            data.appendChild(document.createTextNode(entry.budget));
+            data.style.border = "1px solid black";
+            totalBudget += parseInt(entry.budget);
+        }
+
+        var lastRow = tbl.insertRow();
+        var label = lastRow.insertCell();
+        label.appendChild(document.createTextNode("Total Budget: "));
+        var value = lastRow.insertCell();
+        value.appendChild(document.createTextNode(totalBudget));
+
+
+        document.getElementById("body").appendChild(tbl);
+    }
+
+    window.onload = makeTable();
+</script>
+
+</html>
