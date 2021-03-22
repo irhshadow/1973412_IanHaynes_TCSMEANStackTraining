@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <style>
+        .item {
+            height: 150px;
+            width: 215px;
+            border: 3px solid black;
+            margin: 10px;
+        }
+
+        h3{
+            text-align:center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>Shopping Cart</h3>
+    <div class="container" id="buttons">
+        <div class = "form-group row">
+            <div id="total" class="col-sm-10">Cart Size:</div>
+            <div class="col-small-1"><a href="shopping-cart.html">Shopping Cart</a></div>
+        </div>
+        <div class="form-group row">
+            <div id="item1" class="item">
+                <p>Name: Computer</p>
+                <p>Price: $1500</p>
+                <button type="button" id="button1" class="btn btn-primary" onClick="addItem('button1')">Add to Cart</button>
+            </div>
+
+            <div id="item2" class="item">
+                <p>Name: Phone</p>
+                <p>Price: $800</p>
+                <button type="button" id="button2" class="btn btn-primary" onClick="addItem('button2')">Add to Cart</button>
+            </div>
+
+            <div id="item3" class="item">
+                <p>Name: Blanket</p>
+                <p>Price: $100</p>
+                <button type="button" id="button3" class="btn btn-primary" onClick="addItem('button3')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div id="item4" class="item">
+                <p>Name: Bed</p>
+                <p>Price: $2000</p>
+                <button type="button" id="button4" class="btn btn-primary" onClick="addItem('button4')">Add to Cart</button>
+            </div>
+
+            <div id="item5" class="item">
+                <p>Name: TV</p>
+                <p>Price: $400</p>
+                <button type="button" id="button5" class="btn btn-primary" onClick="addItem('button5')">Add to Cart</button>
+            </div>
+
+            <div id="item6" class="item">
+                <p>Name: Phone Case</p>
+                <p>Price: $20</p>
+                <button type="button" id="button6" class="btn btn-primary" onClick="addItem('button6')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+<script src="script.js"></script>
+
+
+</html>
