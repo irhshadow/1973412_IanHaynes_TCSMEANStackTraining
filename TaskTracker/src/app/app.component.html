@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>Task Tracker</title>
+</head>
+
+<body>
+
+  
+  <h1>Task Tracker</h1>
+  <div class="task-creator">
+    <div class="container">
+      <h3>To-do Tasks</h3>
+
+      <div class="table">
+        <form #userRef="ngForm" onsubmit="return false" id="form">
+          <mat-form-field>
+            <mat-label>ID: </mat-label>
+            <input matInput type="number" name="ID" ngModel>
+          </mat-form-field><br>   
+  
+          <mat-form-field>
+            <mat-label>Name: </mat-label>
+            <input matInput type="text" name="name" ngModel>
+          </mat-form-field><br>
+          
+          <mat-form-field>
+            <mat-label for="task">Task: </mat-label>
+            <input matInput type="text" name="task" ngModel>
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <mat-label for="Deadline">Deadline: </mat-label>
+            <input matInput type="text" name="Deadline" ngModel>
+          </mat-form-field><br>
+          
+          <button mat-raised-button type="button" (click)="storeTask(userRef.value)" onsubmit="return false" color="primary">Submit!</button>
+          <button mat-raised-button type="reset" color="warn">Reset</button>
+          <button mat-raised-button type="button" (click)="storeTask(userRef.value)" color="accent">TEST</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="task-table">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Task</th>
+          <th>Deadline</th>
+        </tr>
+      </thead>
+      <tbody id="table">
+
+      </tbody>
+
+
+    </table>
+  </div>
+</body>
+
+</html>
+
+

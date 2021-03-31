@@ -1,0 +1,13 @@
+
+.box-content{
+    height:200px;
+    width:750px;
+    border: 1px solid black;
+    margin:auto;
+    text-align:center;
+    
+}
+
+#instructions{
+    line-height:100px;
+}

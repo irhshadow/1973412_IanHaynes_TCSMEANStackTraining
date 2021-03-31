@@ -1,0 +1,20 @@
+.question-container{
+    height:100px;
+    width: 75%;
+    border: 1px solid rgba(0,0,0,.25);
+    margin:auto;
+}
+
+.question{
+    text-align:left;
+    color:black;
+}
+
+.container form label{
+    margin-right: 10px;
+    margin-left:2px;
+}
+
+.test{
+    color:red;
+}

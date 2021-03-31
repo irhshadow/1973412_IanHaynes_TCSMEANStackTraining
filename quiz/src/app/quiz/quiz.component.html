@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id="content">
+
+        <form *ngFor="let question of questions; let i=index" [id] = i class="question-container">
+            <label>{{question.id}}: {{question.question}}</label><br>
+            <input type="radio" [value]="question.a1" name="option"/>
+            <label>{{question.a1}}</label>
+            <input type="radio" [value]="question.a2" name="option"/>
+            <label>{{question.a2}}</label>
+            <input type="radio" [value]="question.a3" name="option"/>
+            <label>{{question.a3}}</label>
+            <input type="radio" [value]="question.a4" name="option"/>
+            <label>{{question.a4}}</label>
+        </form>
+        <input  type="button" id="submitButton" class="btn btn-primary" value="Submit" (click)="checkAnswers()"/>
+        <div>{{resultMessage}}</div>
+    </div>
+
+
+    <a routerLink="/landing">Landing</a>
+    <router-outlet></router-outlet>
+</body>
+
+</html>

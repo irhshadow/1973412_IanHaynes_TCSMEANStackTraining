@@ -1,0 +1,14 @@
+{
+"questions":[
+{"id": 0,"question":"What is 2+2?","a1":"1","a2":"4","a3":"5","a4":"22","answer":"4"},
+{"id": 1,"question":"What is the capital of the United States?","a1":"New York","a2":"Philadelphia","a3":"Washington DC","a4":"Harrisburg","answer":"Washington DC"},
+{"id": 2,"question":"What color is the sky?","a1":"red","a2":"green","a3":"yellow","a4":"blue","answer":"blue"},
+{"id": 3,"question":"Who was the first president?","a1":"George Washington","a2":"George Bush","a3":"George HW Bush","a4":"Abraham Lincoln","answer":"George Washington"},
+{"id": 4,"question":"How many world wars was there?","a1":"0","a2":"1","a3":"2","a4":"3","answer":"2"},
+{"id": 5,"question":"What is 0/0?","a1":"0","a2":"Infinity","a3":"Undefined","a4":"None of the above","answer":"Undefined"},
+{"id": 6,"question":"What is 7*8?","a1":"42","a2":"64","a3":"15","a4":"56","answer":"56"},
+{"id": 7,"question":"How many correct answers are needed to pass?","a1":"7","a2":"8","a3":"9","a4":"10","answer":"7"},
+{"id": 8,"question":"What version of HTML is this?","a1":"4","a2":"5","a3":"6","a4":"7","answer":"5"},
+{"id": 9,"question":"What time zone is Pittsburgh in?","a1":"GMT","a2":"EST","a3":"MST","a4":"PST","answer":"EST"}
+]
+}

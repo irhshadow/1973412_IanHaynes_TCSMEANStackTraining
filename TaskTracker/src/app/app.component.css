@@ -1,0 +1,12 @@
+.task-creator{
+    border-top: 2px solid black;
+    border-right: 1px solid black;
+    float:left;
+    width:49%;
+}
+
+.task-table{
+    border-top: 2px solid black;
+    float:right;
+    width:50%;
+}
