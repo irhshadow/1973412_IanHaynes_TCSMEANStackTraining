@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     email: {type: String, required: true},
     password: {type: String, required: true, select: false },
-    name: { type: String, required: true}
+    name: { type: String, required: true},
+    following: [{type: Schema.Types.ObjectId, ref: "user" }]
 });
 
 userSchema.methods.encryptPassword = async password => {
